@@ -14,6 +14,7 @@
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "@vapi-ai/web": "^2.2.7",
+    "@vercel/analytics": "^1.5.0",
     "ai": "^4.3.10",
     "clsx": "^2.1.1",
     "lucide-react": "^0.503.0",
