@@ -55,7 +55,7 @@ const Form = () => {
                     />
                 </label>
                 <button id='stagger' className='w-full flex-center gap-3 cursor-pointer text-neutral-300 text-[1.1em] rounded-2xl bg-black/50 px-4 py-3' type='submit'>
-                    <Beam bg='green' />
+                    <Beam bg='yellow' />
                     <p> {state.submitting ? 'Sending ...' : 'Send Message'}</p>
                     <Image alt='Arrow-up' width={14} height={14} src={'/assets/arrow-up.png'} className={'object-cover wave-animation '} />
 

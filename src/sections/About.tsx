@@ -80,12 +80,14 @@ const About = () => {
                             Based in Karachi, Pakistan. I collaborate remotely across time
                             zones to align with your schedule.
                         </p>
-                        <Button
-                            beam
-                            title={"Let's Convert"}
-                            containerClass='w-full'
-                            href={'contact'}
-                        />
+                        <div  onClick={() =>  window.open('/Rehan-Khan-cv.pdf', '_blank', 'noopener')} >
+                            <Button
+                            href=''
+                                beam
+                                title={"My CV"}
+                                containerClass='w-full'
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -95,7 +97,7 @@ const About = () => {
                     desc={
                         "I translate your unique vision into a high performing web presence through thoughtful strategy, creative design, and technical precision."
                     }
-                    containerClass='xl:col-span-2  xl:row-span-3 ' 
+                    containerClass='xl:col-span-2  xl:row-span-3 '
                 />
 
                 <div id='bento-grid' className='xl:col-span-1 flex flex-col p-4 items-center justify-center  bg-[#0E0E10] border-[1.8px] rounded-xl border-[#1C1C1C] xl:row-span-2'>

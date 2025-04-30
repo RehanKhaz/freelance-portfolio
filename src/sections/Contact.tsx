@@ -10,7 +10,7 @@ const Contact = () => {
       <div className='w-full  flex-between flex-col min-h-[100vh] bg-[#0F0F11] rounded-3xl border-[1.4px] border-neutral-500'>
         <div className=' rounded-t-3xl overflow-hidden bg-gradient-to-r via-[#787879]  to-[#1B1B1D] from-[#303032] flex justify-between px-10 max-md:px-5 py-4 max-md:py-2 w-full'>
           <div className='flex-center gap-4'>
-            {['#F46B5D', '#F9BD4E', '#57C353'].map((bg, index) => {
+            {['#05DF72', 'yellow', '#63FFCD'].map((bg, index) => {
               return <Beam key={index} bg={bg} />
             })}
           </div>

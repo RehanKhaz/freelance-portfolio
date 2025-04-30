@@ -1,3 +1,4 @@
+import { ChatType } from "@/types"
 import { google } from "@ai-sdk/google"
 import { generateText } from "ai"
 
@@ -10,7 +11,10 @@ export function GET() {
 
 
 export async function POST(request: Request) {
-    const { message } = await request.json()
+    const { message, chatHistory } = await request.json()
+    const transcript: string = chatHistory.map((chat: ChatType) => {
+        return `${chat.sender} : ${chat.message}`
+    }).join('\n')
     const { text } = await generateText({
         model: google('gemini-2.0-flash-001'),
         prompt: `
@@ -62,7 +66,13 @@ About Rehan Khan
 => As a freelancer, I craft high-performance, trust-focused websites tailored to each client’s pain points.
 
 => Always ensure your response is personal, clear, and on-brand for Rehan Khan’s portfolio.
-The Message given by visitor is ${message}
+The Message given by user is : ${message}
+The Chat History transcirption between you and user is ${transcript}. First read all the chats between you and user then reply because User can also ask past questions between you and user.
+So Be Careful.
+Don't Mention based on our previous Conversation. Just Reply like you have memory for the Chats.
+Keep your answers short and don't argue with someone. Just give answers.
+If You know the name of user then call him with his name. It makes conversation more beautiful. Don't greet the user like Hi on every message.
+Thank You.
 `,
     })
     return Response.json({
